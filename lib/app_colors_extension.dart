@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 /// Custom app colors `ThemeExtension` template.
 ///
 /// For example purpose, it has all required fields from the default Material `ColorScheme`.
-/// Feel free to rename and add additional fields to your needs.
+/// But you can rename and add additional fields to your needs.
 ///
 /// ### Motivation
 ///

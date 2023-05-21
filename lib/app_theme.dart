@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:theme_extensions/app_colors_extension.dart';
 
 /// Simple custom app theme with `ChangeNotifier` and `ThemeExtension`.
+///
+/// You can also register it in `get_it` or any other DI container.
 class AppTheme with ChangeNotifier {
   ThemeMode _themeMode = ThemeMode.system;
 
@@ -71,7 +73,7 @@ class AppTheme with ChangeNotifier {
 ///
 /// Never use `Theme.of(context).extension<MyColors>()!` how they do it in the [official example](https://api.flutter.dev/flutter/material/ThemeExtension-class.html),
 /// because it's not safe. Always create a getter for your `ThemeExtension` and use it instead.
-/// 
+///
 /// Usage example: `Theme.of(context).appColors`.
 extension AppThemeExtension on ThemeData {
   AppColorsExtension get appColors =>
@@ -79,7 +81,7 @@ extension AppThemeExtension on ThemeData {
 }
 
 /// A more convenient way to get `ThemeData` from the `BuildContext`.
-/// 
+///
 /// Usage example: `context.theme.appColors`.
 extension ThemeGetter on BuildContext {
   ThemeData get theme => Theme.of(this);

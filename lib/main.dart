@@ -12,7 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      // 1. Provide AppTheme to the entire app.
+      // 1. Provide AppTheme above the MaterialApp, so it will be available on all pages.
       create: (_) => AppTheme(),
       builder: (context, _) => MaterialApp(
         title: 'Flutter Demo',

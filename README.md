@@ -1,5 +1,7 @@
 # Flutter custom app theme with ThemeExtension (example + template)
 
+This is a simple Flutter custom theme example with [ThemeExtension](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) for custom colors.
+
 ## Files navigation
 
 [app_theme.dart](lib/app_theme.dart) - simple `AppTheme` **template** with `ChangeNotifier` for changing `ThemeMode` and `ThemeExtension` for custom colors.
