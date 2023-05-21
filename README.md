@@ -11,3 +11,7 @@ This is a simple Flutter custom theme example with [ThemeExtension](https://api.
 [app_palette.dart](lib/app_palette.dart) - **example** on how to define custom color palette with 2 approaches to group colors.
 
 [main.dart](lib/main.dart) - usage **example**.
+
+---
+
+Flutter version: 3.10.1
