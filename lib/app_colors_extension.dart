@@ -10,11 +10,11 @@ import 'package:flutter/material.dart';
 /// At the beginning, you may not know if your colors will fit into the Material `ColorScheme`,
 /// but you still decided to start using `ColorScheme`, and only then realize that you need additional fields. 
 /// You will create `ThemeExtension` for only the additional fields, and in the result you will have your colors
-/// scattered between the `ColorScheme` and `ThemeExtension` with few extra fields.
+/// scattered between the `ColorScheme` and `ThemeExtension` with a few extra colors.
 /// 
 /// With this template, you can collect all fields in one place, and don't worry about future field naming changes and additions.
 ///
-/// Another use case is to just quickly copy-pase this file and rename fields to your needs.
+/// Or you can just quickly copy-pase this file and rename fields to your needs.
 class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   AppColorsExtension({
     required this.primary,

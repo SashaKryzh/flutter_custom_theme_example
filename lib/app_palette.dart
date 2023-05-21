@@ -1,4 +1,3 @@
-import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class AppPalette {
@@ -7,4 +6,17 @@ abstract class AppPalette {
 
   // White
   static const Color seashell = Color(0xFFF7EBE8);
+
+  // Grey
+  static const grey = _GreyColors();
+}
+
+/// Alternative way to group colors in the palette.
+///
+/// Usage example: `AppPalette.grey.grey50`.
+class _GreyColors {
+  const _GreyColors();
+
+  final grey50 = const Color(0xFFFAFAFA);
+  final grey100 = const Color(0xFFF5F5F5);
 }

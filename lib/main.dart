@@ -12,11 +12,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
+      // 1. Provide AppTheme to the entire app.
       create: (_) => AppTheme(),
       builder: (context, _) => MaterialApp(
         title: 'Flutter Demo',
         theme: AppTheme.light,
         darkTheme: AppTheme.dark,
+        // 2. Watch AppTheme changes.
         themeMode: context.watch<AppTheme>().themeMode,
         debugShowCheckedModeBanner: false,
         home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -43,6 +45,11 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  void updateThemeMode(ThemeMode themeMode) {
+    // 3. Update ThemeMode.
+    context.read<AppTheme>().themeMode = themeMode;
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -65,21 +72,15 @@ class _MyHomePageState extends State<MyHomePage> {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 TextButton(
-                  onPressed: () {
-                    context.read<AppTheme>().themeMode = ThemeMode.light;
-                  },
+                  onPressed: () => updateThemeMode(ThemeMode.light),
                   child: const Text('Light'),
                 ),
                 TextButton(
-                  onPressed: () {
-                    context.read<AppTheme>().themeMode = ThemeMode.dark;
-                  },
+                  onPressed: () => updateThemeMode(ThemeMode.dark),
                   child: const Text('Dark'),
                 ),
                 TextButton(
-                  onPressed: () {
-                    context.read<AppTheme>().themeMode = ThemeMode.system;
-                  },
+                  onPressed: () => updateThemeMode(ThemeMode.system),
                   child: const Text('System'),
                 ),
               ],
