@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:theme_extensions/app_theme.dart';
+import 'package:theme_extensions/app_typography.dart';
 
 void main() {
   runApp(const MyApp());
@@ -61,12 +62,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
+            Text(
               'You have pushed the button this many times:',
+              // Usage of custom typography with extension.
+              style: context.theme.appTextTheme.body1,
             ),
             Text(
               '$_counter',
-              style: context.theme.textTheme.headlineMedium,
+              // Usage of custom typography without extension.
+              style: AppTypography.h1.copyWith(
+                color: context.theme.appColors.primary,
+              ),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
