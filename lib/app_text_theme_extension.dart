@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 /// If your goal is to only change text color for light/dark mode, I don't see a big benefit from this extension.
 /// For default text style in Text widget, you can set `textTheme.bodyMedium` in `ThemeData` (example: lib/app_theme.dart).
 /// And to set text color for specific widget, you can use `style: TextStyle(color: Theme.of(context).appColors.error)` or
-/// `style: context.theme.appTextTheme.h1.copyWith(color: context.appColors.primary)`.
+/// `style: AppTypography.h1.copyWith(color: context.appColors.primary)`.
 class AppTextTheme extends ThemeExtension<AppTextTheme> {
   const AppTextTheme({
     required this.body1,
