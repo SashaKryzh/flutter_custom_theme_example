@@ -17,9 +17,11 @@ class MyApp extends StatelessWidget {
       create: (_) => AppTheme(),
       builder: (context, _) => MaterialApp(
         title: 'Flutter Demo',
+        // 2. Provide light theme.
         theme: AppTheme.light,
+        // 3. Provide dark theme.
         darkTheme: AppTheme.dark,
-        // 2. Watch AppTheme changes.
+        // 4. Watch AppTheme changes (ThemeMode).
         themeMode: context.watch<AppTheme>().themeMode,
         debugShowCheckedModeBanner: false,
         home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -47,7 +49,7 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   void updateThemeMode(ThemeMode themeMode) {
-    // 3. Update ThemeMode.
+    // 5. Update ThemeMode.
     context.read<AppTheme>().themeMode = themeMode;
   }
 

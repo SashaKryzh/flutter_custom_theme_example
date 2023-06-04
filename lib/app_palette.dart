@@ -1,7 +1,8 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 
 abstract class AppPalette {
   // Red
+  static const red = Colors.red;
   static const imperialRed = Color(0xFFE54B4B);
 
   // White

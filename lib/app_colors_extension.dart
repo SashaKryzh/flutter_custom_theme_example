@@ -3,15 +3,15 @@ import 'package:flutter/material.dart';
 /// Custom app colors `ThemeExtension` template.
 ///
 /// For example purpose, it has all required fields from the default Material `ColorScheme`.
-/// But you can rename and add additional fields to your needs.
+/// But you can add, rename and delete any fields your needs.
 ///
 /// ### Motivation
 ///
 /// At the beginning, you may not know if your colors will fit into the Material `ColorScheme`,
-/// but you still decided to start using `ColorScheme`, and only then realize that you need additional fields. 
+/// but you still decided to start using `ColorScheme`, and only then realize that you need additional fields.
 /// You will create `ThemeExtension` for only the additional fields, and in the result you will have your colors
 /// scattered between the `ColorScheme` and `ThemeExtension` with a few extra colors.
-/// 
+///
 /// With this template, you can collect all fields in one place, and don't worry about future field naming changes and additions.
 ///
 /// Or you can just quickly copy-pase this file and rename fields to your needs.
@@ -91,7 +91,7 @@ class AppColorsExtension extends ThemeExtension<AppColorsExtension> {
   }
 }
 
-/// If you also want to assign colors in `ColorScheme`.
+/// Optional. If you also want to assign colors in `ColorScheme`.
 extension ColorSchemeBuilder on AppColorsExtension {
   ColorScheme toColorScheme(Brightness brightness) {
     return ColorScheme(

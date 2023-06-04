@@ -1,39 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:theme_extensions/app_colors_extension.dart';
 import 'package:theme_extensions/app_text_theme_extension.dart';
-import 'package:theme_extensions/app_typography.dart';
 
-/// Simple custom app theme with `ChangeNotifier` and `ThemeExtension`.
-///
-/// You can also register it in `get_it` or any other DI container.
 class AppTheme with ChangeNotifier {
-  ThemeMode _themeMode = ThemeMode.system;
-
-  ThemeMode get themeMode => _themeMode;
-
-  set themeMode(ThemeMode themeMode) {
-    _themeMode = themeMode;
-    notifyListeners();
-  }
-
   //
   // Light theme
   //
 
-  static final light = () {
-    final defaultTheme = ThemeData.light();
-
-    return defaultTheme.copyWith(
-      textTheme: defaultTheme.textTheme.copyWith(
-        // Default text style for Text widget.
-        bodyMedium: AppTypography.body1.copyWith(color: Colors.black),
-      ),
-      extensions: [
-        _lightAppColors,
-        _lightTextTheme,
-      ],
-    );
-  }();
+  static final light = ThemeData.light().copyWith(
+    extensions: [
+      _lightAppColors,
+    ],
+  );
 
   static final _lightAppColors = AppColorsExtension(
     primary: const Color(0xff6200ee),
@@ -48,29 +26,15 @@ class AppTheme with ChangeNotifier {
     onSurface: Colors.black,
   );
 
-  static final _lightTextTheme = SimpleAppTextThemeExtension(
-    body1: AppTypography.body1.copyWith(color: _lightAppColors.onBackground),
-    h1: AppTypography.h1.copyWith(color: Colors.black),
-  );
-
   //
   // Dark theme
   //
 
-  static final dark = () {
-    final defaultTheme = ThemeData.dark();
-
-    return defaultTheme.copyWith(
-      textTheme: defaultTheme.textTheme.copyWith(
-        // Default text style for Text widget.
-        bodyMedium: AppTypography.body1.copyWith(color: Colors.white),
-      ),
-      extensions: [
-        _darkAppColors,
-        _darkTextTheme,
-      ],
-    );
-  }();
+  static final dark = ThemeData.dark().copyWith(
+    extensions: [
+      _darkAppColors,
+    ],
+  );
 
   static final _darkAppColors = AppColorsExtension(
     primary: const Color(0xffbb86fc),
@@ -84,11 +48,6 @@ class AppTheme with ChangeNotifier {
     surface: const Color(0xff121212),
     onSurface: Colors.white,
   );
-
-  static final _darkTextTheme = SimpleAppTextThemeExtension(
-    body1: AppTypography.body1.copyWith(color: _darkAppColors.onBackground),
-    h1: AppTypography.h1.copyWith(color: Colors.white),
-  );
 }
 
 /// Define getters for your `ThemeExtension` here.
@@ -101,8 +60,8 @@ extension AppThemeExtension on ThemeData {
   AppColorsExtension get appColors =>
       extension<AppColorsExtension>() ?? AppTheme._lightAppColors;
 
-  SimpleAppTextThemeExtension get appTextTheme =>
-      extension<SimpleAppTextThemeExtension>() ?? AppTheme._lightTextTheme;
+  // AppTextThemeExtension get appTextTheme =>
+  //     extension<AppTextThemeExtension>() ?? AppTheme._lightTextTheme;
 }
 
 /// A more convenient way to get `ThemeData` from the `BuildContext`.
