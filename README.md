@@ -4,7 +4,7 @@
 
 This is a simple Flutter custom theme example with [ThemeExtension](https://api.flutter.dev/flutter/material/ThemeExtension-class.html) for custom colors and text styles.
 
-⭐️ Article on Medium
+⭐️ **[Article on Medium](https://medium.com/@alexandersnotes/flutter-custom-theme-with-themeextension-792034106abc)**
 
 ## Files navigation
 
