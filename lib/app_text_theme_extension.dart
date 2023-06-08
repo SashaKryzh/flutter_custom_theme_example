@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
-/// `ThemeExtension` for custom text styles example.
+/// `ThemeExtension` template for custom text styles.
 ///
-/// If your goal is to only change text color for light/dark mode, I don't see a big benefit from this extension.
-/// For default text style in Text widget, you can set `textTheme.bodyMedium` in `ThemeData` (example: lib/app_theme.dart).
-/// And to set text color for specific widget, you can use `style: TextStyle(color: Theme.of(context).appColors.error)` or
+/// If your goal is to only change the text color for light/dark mode, I don't see a big benefit from this extension.
+/// For the default text style in the Text widget, you can set `textTheme.bodyMedium` in `ThemeData` (example: lib/app_theme.dart).
+/// And to set text color for specific widgets, you can use `style: TextStyle(color: Theme.of(context).appColors.error)` or
 /// `style: AppTypography.h1.copyWith(color: context.theme.appColors.error)`.
 class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
   const AppTextThemeExtension({
@@ -97,7 +97,7 @@ class AppTextThemeExtension extends ThemeExtension<AppTextThemeExtension> {
   }
 }
 
-// Small variant. Used for an example in lib/app_theme.dart.
+/// Small version. Used as an example in lib/app_theme.dart.
 class SimpleAppTextThemeExtension
     extends ThemeExtension<SimpleAppTextThemeExtension> {
   const SimpleAppTextThemeExtension({

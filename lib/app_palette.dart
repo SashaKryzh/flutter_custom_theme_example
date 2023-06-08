@@ -13,6 +13,10 @@ abstract class AppPalette {
 }
 
 /// Alternative way to group colors in the palette.
+/// 
+/// The downside is that you won't be able
+/// to use them as constructor default values,
+/// because they are not constants.
 ///
 /// Usage example: `AppPalette.grey.grey50`.
 class _GreyColors {

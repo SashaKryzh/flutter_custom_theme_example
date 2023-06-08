@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-// Example of an alternative way to group text styles can be found in lib/app_palette.dart.
+// An example of an alternative way to group text styles
+// can be found in the `lib/app_palette.dart` file.
 abstract class AppTypography {
   static const body1 = TextStyle(
     fontSize: 16,

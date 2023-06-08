@@ -66,12 +66,12 @@ class _MyHomePageState extends State<MyHomePage> {
           children: <Widget>[
             Text(
               'You have pushed the button this many times:',
-              // Usage of custom typography with extension.
+              // Usage of custom typography with text theme extension.
               style: context.theme.appTextTheme.body1,
             ),
             Text(
               '$_counter',
-              // Usage of custom typography without extension.
+              // Usage of custom typography without text theme extension.
               style: AppTypography.h1.copyWith(
                 color: context.theme.appColors.primary,
               ),
